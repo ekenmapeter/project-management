@@ -29,19 +29,27 @@ class AdduserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'division' => ['required', 'string', 'max:255'],
+            'statelocated' => ['required', 'string', 'max:255'],
+            'phonenumber' => ['required', 'string', 'max:255'],
+            'role' => ['required', 'string', 'max:255'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
+            'division' => $request->division,
+            'statelocated' =>$request->statelocated ,
+            'phonenumber' =>$request->phonenumber ,
+            'role' => $request->role,
             'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
 
         //Auth::login($user);
-        Session::flash('message', 'New User '.$request->name.' has being created'); 
+        Session::flash('message', 'New User <span class="badge text-bg-primary">'.$request->name.'</span> with <span class="badge text-bg-primary">'.$request->role.'</span> Role has being created'); 
         Session::flash('alert-class', 'alert-success');
         return Redirect::back();
         

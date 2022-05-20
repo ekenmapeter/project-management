@@ -20,12 +20,12 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4 alert alert-danger" :errors="$errors" />
-        @if(Session::has('message'))
-    <p class="alert {{ Session::get('alert-class', 'alert-success') }}">{{ Session::get('message') }}</p>
-        @endif
+@if(Session::has('message'))
+<p class="alert {{ Session::get('alert-class', 'alert-success') }}">{!! Session::get('message') !!}</p>
+    @endif
         <form method="POST" action="/addnewuser">
             @csrf
-            <div>
+         
                 <div class="row">
                     <div class="col-2">
                           <x-label for="name" :value="__('Name')" />
@@ -39,9 +39,9 @@
               
 
                 
-            </div>
+      
 
-            <div>
+    
 
             <div class="row">
                     <div class="col-2">
@@ -56,9 +56,9 @@
               
 
                 
-            </div>
+      
 
-            <div>
+        
 
             <div class="row">
                     <div class="col-2">
@@ -70,12 +70,20 @@
                     </div>
                     
                     </div>
+
+            <div class="row">
+                    <div class="col-2">
+                         <x-label for="statelocated" :value="__('Phone Number')" />
+                    </div>
+
+                    <div class="col-10">
+                        <x-input id="phonenumber" class="block mt-1 w-full" type="text" name="phonenumber" :value="old('phonenumber')" required autofocus />
+                    </div>
+                    
+                    </div>
               
 
-                
-            </div>
-
-            <div>
+        
 
             <div class="row">
                     <div class="col-2">
@@ -89,10 +97,9 @@
                     </div>
               
 
-                
-            </div>
+    
 
-            <div>
+          
 
             <div class="row">
                     <div class="col-2">
@@ -106,11 +113,9 @@
                     </div>
               
 
-                
-            </div>
 
-            <div>
 
+ 
             <div class="row">
                     <div class="col-2">
                           <x-label for="password" :value="__('Password')" />
@@ -127,8 +132,6 @@
                     </div>
               
 
-                
-            </div>
 
 
             <!-- Confirm Password -->

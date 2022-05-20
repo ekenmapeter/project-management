@@ -31,7 +31,7 @@
 
                         <div class="col-4 col-sm-3 ">
                             <div class="h-100 p-3 bg-dark border rounded-3">
-                            <a href="/south-west">
+                            <a href="#">
                                 <button type="button" class="btn btn-outline-light">North Central</button>
                             </a>
                             </div>
@@ -39,7 +39,7 @@
 
                         <div class="col-4 col-sm-3 ">
                             <div class="h-100 p-3 bg-dark border rounded-3">
-                            <a href="/south-west">
+                            <a href="#">
                                 <button type="button" class="btn btn-outline-light">North East</button>
                             </a>
                             </div>
@@ -49,7 +49,7 @@
             <div class="row align-items-md-stretch">
                     <div class="col-4 col-sm-3 ">
                         <div class="h-100 p-3 bg-dark border rounded-3">
-                        <a href="/south-west">
+                        <a href="#">
                             <button type="button" class="btn btn-outline-light">North West</button>
                         </a>
                     </div>
@@ -57,7 +57,7 @@
 
                     <div class="col-4 col-sm-3 ">
                         <div class="h-100 p-3 bg-dark border rounded-3">
-                        <a href="/south-west">
+                        <a href="#">
                             <button type="button" class="btn btn-outline-light">South East</button>
                         </a>
                     </div>
@@ -65,7 +65,7 @@
 
                     <div class="col-4 col-sm-3 ">
                         <div class="h-100 p-3 bg-dark border rounded-3">
-                        <a href="/south-west">
+                        <a href="#">
                             <button type="button" class="btn btn-outline-light">South South</button>
                         </a>
                     </div>

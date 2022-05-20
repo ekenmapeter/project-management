@@ -52,5 +52,9 @@
                 </x-button>
             </div>
         </form>
+          <div class="block mt-4">
+    New Member? <a href="{{ route('register') }}" class="btn btn-info">Register</a>
+</div>
     </x-auth-card>
+  
 </x-guest-layout>
