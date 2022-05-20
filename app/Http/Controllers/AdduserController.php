@@ -41,9 +41,9 @@ class AdduserController extends Controller
         event(new Registered($user));
 
         //Auth::login($user);
-
-        return Redirect::back();
         Session::flash('message', 'New User '.$request->name.' has being created'); 
-        Session::flash('alert-class', 'alert-danger');
+        Session::flash('alert-class', 'alert-success');
+        return Redirect::back();
+        
     }
 }

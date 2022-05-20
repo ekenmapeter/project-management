@@ -7,12 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-
+            
 <div>
     <hr>
     <div class="row">
@@ -26,7 +21,7 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4 alert alert-danger" :errors="$errors" />
         @if(Session::has('message'))
-    <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+    <p class="alert {{ Session::get('alert-class', 'alert-success') }}">{{ Session::get('message') }}</p>
         @endif
         <form method="POST" action="/addnewuser">
             @csrf
