@@ -12,18 +12,23 @@
                     You're logged in!
                 </div>
             </div>
-        <x-auth-card>
-        <x-slot name="logo">
-        <h2>Add New Users</h2>
-        </x-slot>
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+<div>
+    <hr>
+    <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <h2>Add New Users</h2>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <!-- Session Status -->
+        <x-auth-session-status class="mb-4 alert alert-success" :status="session('status')" />
 
         <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('') }}">
+        <x-auth-validation-errors class="mb-4 alert alert-danger" :errors="$errors" />
+        @if(Session::has('message'))
+    <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+        @endif
+        <form method="POST" action="/addnewuser">
             @csrf
             <div>
                 <div class="row">
@@ -118,9 +123,10 @@
 
                     <div class="col-10">
                        <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                                type="text"
+                                name="password" 
+                                value="Enter Your Password"
+                                required />
                     </div>
                     
                     </div>
@@ -128,6 +134,20 @@
 
                 
             </div>
+
+
+            <!-- Confirm Password -->
+                <div class="row">
+                    <div class="col-2">
+                        <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                    </div>
+                    <div class="col-10">
+                        <x-input id="password_confirmation" class="block mt-1 w-full"
+                                        type="text"
+                                        name="password_confirmation" required />
+                    </div>
+                </div>
+
 
           
 
@@ -145,7 +165,12 @@
 
           
         </form>
-    </x-auth-card>
+        </div>
+        
+    </div>
+</div>
+        
+    
         </div>
     </div>
 </x-app-layout>
