@@ -151,7 +151,7 @@
 
 
        <div class="flex items-center justify-end mt-4">
-               
+        <button href="{{ url()->previous() }}" class="rounded-full ...">Back</button>
 
                 <x-button class="ml-3">
                     {{ __('Add New User') }}

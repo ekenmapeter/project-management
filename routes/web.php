@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdduserController;
+use App\Http\Controllers\AddProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,6 +69,7 @@ Route::get('/dashboard', function () {
 
 
 Route::post('addnewuser',[AdduserController::class, 'storenewuser']);
+Route::post('addnewproject',[AddProjectController::class, 'storenewproject']);
 
 
 
