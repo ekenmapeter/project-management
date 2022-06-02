@@ -26,14 +26,13 @@
 
 <form class="form-inline" method="GET">
     <div class="row">
-        <div class="col-lg-12 col-md-6 col-sm-6">
+        <div class="col-lg-8 col-md-8 col-sm-6">
             <div class="form-group mb-2">
-    <label for="filter" class="col-sm-2 col-form-label">Search your report</label>
-    <input type="text" class="form-control" id="filter" name="filter" placeholder="Product name..." value="{{$filter}}">
+    <input type="text" class="form-control" id="filter" name="filter" placeholder="Report name..." value="{{$filter}}">
   </div>
         </div>
-        <div class="col-lg-12 col-md-6 col-sm-6">
-             <button type="submit" class="btn btn-default mb-2">Filter Report</button> 
+        <div class="col-lg-4 col-md-4 col-sm-6">
+             <button type="submit" class="btn btn-primary mb-2">Filter Report</button> 
         </div>
         
     </div>
