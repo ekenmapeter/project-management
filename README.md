@@ -2,6 +2,11 @@
 ## About My Project Management tools
 This project was built with Laravel 9.x, Laravel is a web application framework with expressive, elegant syntax. 
 
+## Dependencies Used
+Filepond
+Laravel Brezze
+kyslik/column-sortable
+Bootstrap 5.2
 
 ## Summary of the project
 
@@ -16,3 +21,7 @@ This project was built with Laravel 9.x, Laravel is a web application framework 
 8, users working on the same project can communicate by chatting.
 9. messages can be sent to single and multiple users.
 10. Reports on a particular project can be filter and seen in summay
+
+
+##Demo link
+https://projectmanager007.herokuapp.com
