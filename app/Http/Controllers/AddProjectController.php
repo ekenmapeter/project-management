@@ -65,4 +65,5 @@ class AddProjectController extends Controller
         return Redirect::back();
         
     }
+
 }
